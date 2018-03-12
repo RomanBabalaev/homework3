@@ -1,9 +1,9 @@
-function task3();{
-for($i=0;$i<51;$i++)
+function task3(){
+for($i=0; $i < 51; $i++)
 {$arr[$i] = mt_rand(1,100);
 }
 
-for($i=0;$i<51;$i++)
+for($i=0; $i<51 ; $i++)
 {echo $arr[$i];
  echo "<br>";}
 
