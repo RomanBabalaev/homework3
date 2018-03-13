@@ -84,7 +84,25 @@ function task3(){
         print_r($arr);
     }
 }
-
+function task4()
+{
+    
+    $link = "https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json";
+    $json = file_get_contents($link);
+    
+    $data = json_decode($json, true);
+    echo '<br>';
+    
+    $title = find_value($data, 'title');
+    if (!empty($title)) {
+        echo 'title = ' . $title . '<br>';
+    }
+    
+    $pageid = find_value($data, 'pageid');
+    if (!empty($pageid)) {
+        echo 'pageid = ' . $pageid . '<br>';
+    }
+}
 
 
 /**
